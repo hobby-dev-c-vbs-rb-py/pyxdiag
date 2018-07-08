@@ -1,0 +1,4 @@
+//http://blockdiag.com/ja/blockdiag/examples.html#direction-of-edges
+blockdiag {
+  A -> B <- C -- D <-> E;
+}

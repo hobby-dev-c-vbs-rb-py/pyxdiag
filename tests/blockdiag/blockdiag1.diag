@@ -1,0 +1,5 @@
+//http://blockdiag.com/ja/blockdiag/examples.html#simple-diagram
+blockdiag {
+   A -> B -> C -> D;
+   A -> E -> F -> G;
+}

@@ -1,0 +1,11 @@
+//http://blockdiag.com/ja/nwdiag/nwdiag-examples.html#peer-networks
+nwdiag {
+  inet [shape = cloud];
+  inet -- router;
+
+  network {
+    router;
+    web01;
+    web02;
+  }
+}

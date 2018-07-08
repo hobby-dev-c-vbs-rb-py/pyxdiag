@@ -1,0 +1,7 @@
+//http://blockdiag.com/ja/blockdiag/examples.html#portrait-mode
+blockdiag {
+  orientation = portrait
+
+  A -> B -> C;
+       B -> D;
+}

@@ -1,0 +1,14 @@
+//http://blockdiag.com/ja/seqdiag/examples.html#separators
+seqdiag {
+  A -> B;
+
+  // Separator
+  === Separator line ===
+
+  A -> B;
+
+  // Delay separator
+  ... Separator line ...
+
+  A -> B;
+}
