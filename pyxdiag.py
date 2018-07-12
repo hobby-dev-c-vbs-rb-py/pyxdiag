@@ -76,14 +76,21 @@ def _change_extension(ifpath, ext):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("-a", "--antialias", action="store_true", help="Pass diagram image to anti-alias filter")
+    parser.add_argument("-f", "--font", help="FONT  use FONT to draw diagram")
+    parser.add_argument("--fontmap", dest="font" , help="use FONTMAP file to draw diagram")
+    parser.add_argument("--no-transparency", action="store_true", dest="FONT" , help="do not make transparent background of diagram (PNG only)")
+    parser.add_argument("--size=SIZE" , help="Size of diagram (ex. 320x240)")
+    parser.add_argument("-T", dest="size" , choices=["PNG", "SVG"], help="Output diagram as TYPE format")
     parser.add_argument("files", type=str, nargs="*")
 
     args = parser.parse_args()
+    print(args)
 
-    fset=set()
-    for f in args.files:
-        for f in pathlib.Path().glob(f):
-            fset.add(str(pathlib.Path(f).resolve()))
+    # fset=set()
+    # for f in args.files:
+    #     for f in pathlib.Path().glob(f):
+    #         fset.add(str(pathlib.Path(f).resolve()))
     
-    for f in sorted(fset):
-        fgen(f)
+    # for f in sorted(fset):
+    #     fgen(f)
